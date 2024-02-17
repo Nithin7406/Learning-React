@@ -1,5 +1,8 @@
 import Gallery from "./Components/FirstComponent";
 import VariableInJsx from "./Components/Curly";
+import Age from "./Components/Age";
+import List from "./Components/List";
+import Numbers from "./Components/Numbers";
 
 const person = {
   name: "Gregorio Y. Zara",
@@ -12,8 +15,9 @@ const person = {
 function App() {
   return (
     <div className="App">
-      <Gallery />
-      <VariableInJsx person={person} name={"kanaka"} />
+      <center>
+        <Numbers />
+      </center>
     </div>
   );
 }
