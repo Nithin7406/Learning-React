@@ -1,8 +1,9 @@
-import Gallery from "./Components/FirstComponent";
-import VariableInJsx from "./Components/Curly";
-import Age from "./Components/Age";
-import List from "./Components/List";
-import Numbers from "./Components/Numbers";
+// import Gallery from "./Components/FirstComponent";
+// import VariableInJsx from "./Components/Curly";
+// import Age from "./Components/Age";
+// import List from "./Components/List";
+// import Numbers from "./Components/Numbers";
+import UserInput from "./Components/UserInput";
 
 const person = {
   name: "Gregorio Y. Zara",
@@ -16,7 +17,8 @@ function App() {
   return (
     <div className="App">
       <center>
-        <Numbers />
+        {/* <Numbers /> */}
+        <UserInput />
       </center>
     </div>
   );
