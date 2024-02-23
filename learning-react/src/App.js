@@ -4,6 +4,8 @@
 // import List from "./Components/List";
 // import Numbers from "./Components/Numbers";
 import UserInput from "./Components/UserInput";
+import State from "./Components/State";
+import "./Screens/Assets/style.css";
 
 const person = {
   name: "Gregorio Y. Zara",
@@ -18,7 +20,8 @@ function App() {
     <div className="App">
       <center>
         {/* <Numbers /> */}
-        <UserInput />
+        <State></State>
+        {/* <UserInput /> */}
       </center>
     </div>
   );
