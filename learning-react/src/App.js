@@ -6,6 +6,7 @@
 import UserInput from "./Components/UserInput";
 import State from "./Components/State";
 import "./Screens/Assets/style.css";
+import Date, { format } from "./Components/Date";
 
 const person = {
   name: "Gregorio Y. Zara",
@@ -20,8 +21,10 @@ function App() {
     <div className="App">
       <center>
         {/* <Numbers /> */}
-        <State></State>
         {/* <UserInput /> */}
+        {/* <State /> */}
+        <Date />
+        <div>{format("2024-02-24")}</div>
       </center>
     </div>
   );
