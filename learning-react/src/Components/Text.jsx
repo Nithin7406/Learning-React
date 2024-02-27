@@ -13,12 +13,17 @@ export default function () {
     setText(newtext);
   };
 
+  const clear = () => {
+    let newtext = "";
+    setText(newtext);
+  };
+
   const onchange = (e) => {
     setText(e.target.value);
   };
 
   return (
-    <div>
+    <div className="d-flex flex-column min-h-screen">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
@@ -83,21 +88,34 @@ export default function () {
                 <a className="nav-link disabled">Disabled</a>
               </li>
             </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            <ul className="navbar-nav ">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  light
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  <div className="form-check form-switch nav-item">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="flexSwitchCheckDefault"
+                    />
+                  </div>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  Dark
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>
-      <div>
+      <div className="page">
         <div className="container my-3">
           <h1>Enter text to analyse..</h1>
           <div className="mb-3">
@@ -109,11 +127,14 @@ export default function () {
               rows="8"
               placeholder="Enter text here..."
             ></textarea>
-            <button className="btn btn-primary mx-2 my-3" onClick={upper}>
+            <button className="btn btn-primary " onClick={upper}>
               Conver to uppercase
             </button>
-            <button className="btn btn-primary my-3" onClick={lower}>
+            <button className="btn btn-primary my-3 mx-3" onClick={lower}>
               Conver to Lowercasr
+            </button>
+            <button className="btn btn-primary" onClick={clear}>
+              Clear TEXT!
             </button>
           </div>
           <h2>Your Text Summery</h2>
