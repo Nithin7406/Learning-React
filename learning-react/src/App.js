@@ -7,7 +7,7 @@
 // import UserInput from "./Components/UserInput";
 // import State from "./Components/State";
 import Text from "./Components/Text";
-import TextForms from "./Components/TextForms";
+import Todo from "./Components/ToDoList/Index";
 
 // const person = {
 //   name: "Gregorio Y. Zara",
@@ -26,9 +26,10 @@ function App() {
       {/* <State /> */}
       {/* <Date />
         <div>{format("2024-02-24")}</div> */}
-      <Text />
+      {/* <Text /> */}
       {/* <TextForms /> */}
       {/* </center> */}
+      <Todo />
     </div>
   );
 }

@@ -22,11 +22,34 @@ export default function () {
     setText(e.target.value);
   };
 
+  const [mystyle, setMyStyle] = useState({
+    color: "black",
+    background: "white",
+  });
+
+  const toggle = () => {
+    if (mystyle.color === "black") {
+      setMyStyle({ color: "white", background: "black" });
+    } else {
+      setMyStyle({ color: "black", background: "white" });
+    }
+  };
+
   return (
-    <div className="d-flex flex-column min-h-screen">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div className="FullPage d-flex flex-column " style={mystyle}>
+      <nav
+        className="navbar navbar-expand-lg navbar-text-black"
+        style={{
+          borderBottom: "2px solid grey",
+          backgroundColor: mystyle.color === "black" ? "#c9c9c9d3" : "#111111 ",
+        }}
+      >
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <a
+            className="navbar-brand"
+            href="/"
+            style={{ color: mystyle.color === "black" ? "black" : "white" }}
+          >
             Navbar
           </a>
           <button
@@ -43,71 +66,68 @@ export default function () {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <a
+                  style={{
+                    color: mystyle.color === "black" ? "black" : "white",
+                  }}
+                  className="nav-link active"
+                  aria-current="page"
+                  href="/"
+                >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Link
-                </a>
-              </li>
-              <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  style={{
+                    color: mystyle.color === "black" ? "black" : "white",
+                  }}
+                  className="nav-link"
                   href="/"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
                 >
-                  Dropdown
+                  About
                 </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
               </li>
             </ul>
             <ul className="navbar-nav ">
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  light
+                <a
+                  style={{
+                    color: mystyle.color === "black" ? "black" : "white",
+                  }}
+                  className="nav-link"
+                  href="/"
+                >
+                  Light
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a
+                  style={{
+                    color: mystyle.color === "black" ? "black" : "white",
+                  }}
+                  className="nav-link"
+                  href="/"
+                >
                   <div className="form-check form-switch nav-item">
                     <input
-                      class="form-check-input"
+                      className="form-check-input"
                       type="checkbox"
                       role="switch"
                       id="flexSwitchCheckDefault"
+                      onClick={toggle}
                     />
                   </div>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a
+                  style={{
+                    color: mystyle.color === "black" ? "black" : "white",
+                  }}
+                  className="nav-link"
+                  href="/"
+                >
                   Dark
                 </a>
               </li>
@@ -126,12 +146,17 @@ export default function () {
               id="myBox"
               rows="8"
               placeholder="Enter text here..."
+              style={{
+                backgroundColor:
+                  mystyle.color === "black" ? "#fafafa" : "#424242d3",
+                color: mystyle.color === "black" ? "black" : "white",
+              }}
             ></textarea>
             <button className="btn btn-primary " onClick={upper}>
               Conver to uppercase
             </button>
             <button className="btn btn-primary my-3 mx-3" onClick={lower}>
-              Conver to Lowercasr
+              Conver to Lowercase
             </button>
             <button className="btn btn-primary" onClick={clear}>
               Clear TEXT!

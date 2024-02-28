@@ -1,5 +1,3 @@
-body {
-  /* background-size: cover; */
-  background-color: #85ffbd;
-  background-image: linear-gradient(135deg, #85ffbd 0%, #fffb7d 69%);
+.FullPage {
+  min-height: 100vh;
 }
