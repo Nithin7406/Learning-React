@@ -6,8 +6,10 @@
 // import Date, { format } from "./Components/Date";
 // import UserInput from "./Components/UserInput";
 // import State from "./Components/State";
-import Text from "./Components/Text";
-import Todo from "./Components/ToDoList/Index";
+// import Text from "./Components/Text";
+// import Todo from "./Components/ToDoList/Index";
+// import Ref from "./Components/Ref";
+import Effect from "./Components/UseEffect";
 
 // const person = {
 //   name: "Gregorio Y. Zara",
@@ -29,7 +31,9 @@ function App() {
       {/* <Text /> */}
       {/* <TextForms /> */}
       {/* </center> */}
-      <Todo />
+      {/* <Todo /> */}
+      {/* <Ref /> */}
+      <Effect />
     </div>
   );
 }
