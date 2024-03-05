@@ -9,7 +9,8 @@
 // import Text from "./Components/Text";
 // import Todo from "./Components/ToDoList/Index";
 // import Ref from "./Components/Ref";
-import Effect from "./Components/UseEffect";
+// import Effect from "./Components/UseEffect";
+import Page from "./Page";
 
 // const person = {
 //   name: "Gregorio Y. Zara",
@@ -33,7 +34,8 @@ function App() {
       {/* </center> */}
       {/* <Todo /> */}
       {/* <Ref /> */}
-      <Effect />
+      {/* <Effect /> */}
+      <Page />
     </div>
   );
 }
