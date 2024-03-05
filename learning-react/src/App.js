@@ -10,7 +10,7 @@
 // import Todo from "./Components/ToDoList/Index";
 // import Ref from "./Components/Ref";
 // import Effect from "./Components/UseEffect";
-import Page from "./Page";
+import Page from "./TextPage/Page";
 
 // const person = {
 //   name: "Gregorio Y. Zara",

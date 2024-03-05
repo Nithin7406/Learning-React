@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import About from "./Components/About";
-import NavBar from "./Components/NavBar";
-import Text from "./Components/Text";
+import About from "./About";
+import NavBar from "./NavBar";
+import Text from "./Text";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 export default function Page() {
